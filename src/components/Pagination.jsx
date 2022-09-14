@@ -32,32 +32,39 @@ const Nav = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4px;
-  margin: 16px;
 
   button {
-    border: none;
-    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    margin: 1px;
     padding: 8px;
-    margin: 0;
-    background: black;
-    color: white;
-    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #dddddd 1px solid;
+    outline: none;
+    font-size: 14px;
+    color: #1d1d1d;
+    background: #fff;
+    transition: all 0.3s;
 
     &:hover {
-      background: tomato;
+      background: deeppink;
+      color: #fff;
       cursor: pointer;
       transform: translateY(-2px);
     }
 
     &[disabled] {
-      background: grey;
+      background: #bababa;
+      color: #fff;
       cursor: revert;
       transform: revert;
     }
 
     &[aria-current] {
       background: deeppink;
+      color: #fff;
       font-weight: bold;
       cursor: revert;
       transform: revert;
