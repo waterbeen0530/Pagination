@@ -5,7 +5,7 @@ import Pagination from "./Pagination";
 
 export default function Posts() {
   const [posts, setPosts] = useState([]);
-  const [limit, setLimit] = useState(10);
+  const [limit, setLimit] = useState(5);
   const [page, setPage] = useState(1);
   const offset = (page - 1) * limit;
 
@@ -35,8 +35,8 @@ export default function Posts() {
             value={limit}
             onChange={({ target: { value } }) => setLimit(Number(value))}
           >
+            <option value="5">5</option>
             <option value="10">10</option>
-            <option value="12">12</option>
             <option value="20">20</option>
             <option value="50">50</option>
             <option value="100">100</option>
